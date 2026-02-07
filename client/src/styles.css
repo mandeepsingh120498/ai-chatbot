@@ -1,0 +1,105 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: #101418;
+  background: #f4f6fa;
+}
+
+body {
+  margin: 0;
+}
+
+.layout {
+  max-width: 820px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(30, 41, 59, 0.1);
+}
+
+h1 {
+  margin-bottom: 0.3rem;
+}
+
+.controls {
+  margin: 1rem 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+select,
+input,
+button {
+  font: inherit;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #d4dce8;
+}
+
+.chatWindow {
+  min-height: 320px;
+  max-height: 420px;
+  overflow-y: auto;
+  background: #f8fafc;
+  border: 1px solid #e1e7ef;
+  border-radius: 10px;
+  padding: 0.8rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.bubble {
+  max-width: 85%;
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+}
+
+.bubble.user {
+  margin-left: auto;
+  background: #dbeafe;
+}
+
+.bubble.assistant {
+  background: #e2fbe8;
+}
+
+.bubble p {
+  margin: 0.3rem 0 0;
+  white-space: pre-wrap;
+}
+
+.composer {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.7rem;
+}
+
+button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.emptyState {
+  color: #6b7280;
+}
+
+.citations {
+  margin: 8px 0 0;
+  padding-left: 16px;
+  font-size: 0.85rem;
+  color: #4a5568;
+}
+
+.citations code {
+  background: #edf2f7;
+  border-radius: 4px;
+  padding: 1px 4px;
+}
