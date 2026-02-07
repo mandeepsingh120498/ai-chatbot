@@ -1,0 +1,19 @@
+{
+  "tenantId": "beta-fitness",
+  "name": "Beta Fitness",
+  "description": "Gym and personal training business",
+  "documents": [
+    {
+      "id": "beta-membership",
+      "content": "Beta Fitness offers monthly and annual memberships. Annual members get two complimentary personal training sessions."
+    },
+    {
+      "id": "beta-hours",
+      "content": "Gym hours are Monday through Friday 5:00 AM to 11:00 PM, and weekends 6:00 AM to 9:00 PM."
+    },
+    {
+      "id": "beta-classes",
+      "content": "Group classes include HIIT, yoga, and spin. Members can book classes up to 7 days in advance using the mobile app."
+    }
+  ]
+}

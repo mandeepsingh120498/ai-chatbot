@@ -1,0 +1,19 @@
+{
+  "tenantId": "alpha-bakery",
+  "name": "Alpha Bakery",
+  "description": "Neighborhood bakery and cafe",
+  "documents": [
+    {
+      "id": "alpha-hours",
+      "content": "Alpha Bakery is open Monday to Saturday from 7:00 AM to 7:00 PM. Sunday hours are 8:00 AM to 3:00 PM."
+    },
+    {
+      "id": "alpha-orders",
+      "content": "Custom cake orders require at least 48 hours notice. Vegan and gluten-free cake options are available on request."
+    },
+    {
+      "id": "alpha-delivery",
+      "content": "Delivery is available within 8 kilometers through our website. Minimum order value for delivery is $20."
+    }
+  ]
+}
