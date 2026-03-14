@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:3001/api";
+const API_BASE = import.meta.env.VITE_API_BASE || "/api";
 
 export default function App() {
   const [tenants, setTenants] = useState([]);
@@ -11,7 +11,13 @@ export default function App() {
 
   useEffect(() => {
     fetch(`${API_BASE}/tenants`)
-      .then((res) => res.json())
+      .then(async (res) => {
+        if (!res.ok) {
+          throw new Error(`Failed to load tenants (${res.status})`);
+        }
+
+        return res.json();
+      })
       .then((data) => {
         setTenants(data.tenants || []);
         if (data.tenants?.[0]) setTenantId(data.tenants[0].tenantId);
@@ -46,6 +52,9 @@ export default function App() {
       });
 
       const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || `Chat request failed (${res.status})`);
+      }
       const assistantMessage = {
         role: "assistant",
         content: data.answer || data.error || "No response received.",
